@@ -25,7 +25,7 @@ class SelfValueTest extends TestCase
         $value = new SelfValue([SelfValue::FIELD__REPLACES => ['value' => 'test']]);
         $this->assertEquals('test', $value->build('@value'));
 
-        $this->expectExceptionMessage('Invalid fields values');
+        $this->expectExceptionMessage('Invalid value dispatcher "Self" settings');
         $value->build([]);
     }
 }
