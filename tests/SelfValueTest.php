@@ -1,6 +1,7 @@
 <?php
 namespace tests;
 
+use Dotenv\Dotenv;
 use extas\components\values\SelfValue;
 use PHPUnit\Framework\TestCase;
 
@@ -12,6 +13,13 @@ use PHPUnit\Framework\TestCase;
  */
 class SelfValueTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $env = Dotenv::create(getcwd() . '/tests/');
+        $env->load();
+    }
+
     public function testBuild()
     {
         $value = new SelfValue([SelfValue::FIELD__REPLACES => ['value' => 'test']]);

@@ -1,0 +1,11 @@
+{
+  "name": "extas/values-self",
+  "values": [
+    {
+      "name": "self",
+      "title": "Using replaces",
+      "description": "Use replaces for building values",
+      "class": "extas\\components\\values\\SelfValue"
+    }
+  ]
+}
